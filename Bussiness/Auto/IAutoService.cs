@@ -9,6 +9,6 @@ namespace Business
         IEnumerable<Auto> ReadAll();
         Auto FindById(int autoId);
         void Update(Auto auto);
-        void Delete(Auto auto);
+        void Delete(int autoId);
     }
 }

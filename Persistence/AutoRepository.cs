@@ -28,8 +28,9 @@ namespace Persistence
             table.Add(entity);
         }
 
-        public void Delete(T entity)
+        public void Delete(int entityId)
         {
+            var entity = table.Find(entityId);
             table.Remove(entity);
         }
 

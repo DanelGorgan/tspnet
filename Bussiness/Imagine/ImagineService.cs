@@ -25,13 +25,13 @@ namespace Business
             imagineRepository.Save();
         }
 
-        public void Delete(Imagine imagine)
+        public void Delete(int imagineId)
         {
-            if (imagine != null)
+            if (imagineId >0)
             {
                 throw new System.ArgumentNullException();
             }
-            imagineRepository.Delete(imagine);
+            imagineRepository.Delete(imagineId);
             imagineRepository.Save();
         }
 

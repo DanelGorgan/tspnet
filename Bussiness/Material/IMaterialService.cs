@@ -8,6 +8,6 @@ namespace Business
         void Create(Material material);
         IEnumerable<Material> ReadAll();
         Material FindById(int materialId);
-        void Delete(Material material);
+        void Delete(int materialId);
     }
 }

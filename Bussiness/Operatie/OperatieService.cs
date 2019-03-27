@@ -24,13 +24,13 @@ namespace Business
             operatieRepository.Save();
         }
 
-        public void Delete(Operatie operatie)
+        public void Delete(int operatieId)
         {
-            if (operatie != null)
+            if (operatieId > 0)
             {
                 throw new System.ArgumentNullException();
             }
-            operatieRepository.Delete(operatie);
+            operatieRepository.Delete(operatieId);
             operatieRepository.Save();
         }
 

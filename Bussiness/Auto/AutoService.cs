@@ -24,13 +24,13 @@ namespace Business
             autoRepository.Save();
         }
 
-        public void Delete(Auto auto)
+        public void Delete(int autoId)
         {
-            if (auto != null)
+            if (autoId > 0)
             {
                 throw new System.ArgumentNullException();
             }
-            autoRepository.Delete(auto);
+            autoRepository.Delete(autoId);
             autoRepository.Save();
         }
 
@@ -59,7 +59,7 @@ namespace Business
 
             car.NumarAuto = auto.NumarAuto == null ? car.NumarAuto : auto.NumarAuto;
             car.SerieSasiu = auto.SerieSasiu == null ? car.SerieSasiu : auto.SerieSasiu;
-            car.Sasiu = auto.Sasiu == null ? car.Sasiu : auto.Sasiu;
+            car.Sasius = auto.Sasius == null ? car.Sasius : auto.Sasius;
 
             autoRepository.Save();
         }

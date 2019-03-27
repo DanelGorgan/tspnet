@@ -8,6 +8,6 @@ namespace Business
         void Create(DetaliuComanda detaliuComanda);
         IEnumerable<DetaliuComanda> ReadAll();
         DetaliuComanda FindById(int detaliuComandaId);
-        void Delete(DetaliuComanda detaliuComanda);
+        void Delete(int detaliuComandaId);
     }
 }

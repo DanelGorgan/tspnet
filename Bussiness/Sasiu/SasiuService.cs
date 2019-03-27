@@ -24,13 +24,13 @@ namespace Business
             sasiuRepository.Save();
         }
 
-        public void Delete(Sasiu sasiu)
+        public void Delete(int sasiuId)
         {
-            if (sasiu != null)
+            if (sasiuId > 0)
             {
                 throw new System.ArgumentNullException();
             }
-            sasiuRepository.Delete(sasiu);
+            sasiuRepository.Delete(sasiuId);
             sasiuRepository.Save();
         }
 
@@ -57,7 +57,6 @@ namespace Business
 
             var sasiuU = sasiuRepository.Where(s => s.Id == sasiu.Id).FirstOrDefault();
 
-            sasiuU.Autoes = sasiu.Autoes == null? sasiuU.Autoes : sasiu.Autoes;
             sasiuU.CodSasiu = sasiu.CodSasiu == null ? sasiuU.CodSasiu : sasiu.CodSasiu;
             sasiuU.Denumire = sasiu.Denumire == null ? sasiuU.Denumire : sasiu.Denumire;
 

@@ -8,7 +8,7 @@ namespace Business
         void Create(Client client);
         IEnumerable<Client> ReadAll();
         Client FindById(int clientId);
-        void Delete(Client client);
+        void Delete(int clientId);
         Client GetClientAutoes(int clientId);
     }
 }

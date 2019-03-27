@@ -7,7 +7,7 @@ namespace Business
     {
         void Create(Operatie operatie);
         IEnumerable<Operatie> ReadAll();
-        void Delete(Operatie operatie);
+        void Delete(int operatieId);
         Operatie FindById(int operatieId);
     }
 }

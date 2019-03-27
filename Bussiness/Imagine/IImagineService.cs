@@ -8,6 +8,6 @@ namespace Business
         void Create(Imagine imagine);
         IEnumerable<Imagine> ReadAll();
         Imagine FindById(int imagineId);
-        void Delete(Imagine imagine);
+        void Delete(int imagineId);
     }
 }

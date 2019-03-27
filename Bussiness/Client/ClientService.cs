@@ -24,13 +24,13 @@ namespace Business
             clientRepository.Save();
         }
 
-        public void Delete(Client client)
+        public void Delete(int clientId)
         {
-            if (client != null)
+            if (clientId > 0)
             {
                 throw new System.ArgumentNullException();
             }
-            clientRepository.Delete(client);
+            clientRepository.Delete(clientId);
             clientRepository.Save();
         }
 
@@ -88,7 +88,6 @@ namespace Business
             clientU.Telefon = client.Telefon == default(decimal) ? clientU.Telefon : client.Telefon;
             clientU.Adresa = client.Adresa == null ? clientU.Adresa : client.Adresa;
             clientU.Autoes = client.Autoes == null ? clientU.Autoes : client.Autoes ;
-            clientU.Comandas = client.Comandas == null ? clientU.Comandas : client.Comandas;
             clientU.Email = client.Email == null ? clientU.Email : client.Email;
             clientRepository.Save();
         }

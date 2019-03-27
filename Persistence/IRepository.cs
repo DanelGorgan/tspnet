@@ -12,7 +12,7 @@ namespace Persistence
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
         void Add(T entity);
         T FindById(int entityId);
-        void Delete(T entity);
+        void Delete(int entityId);
         void Save();
     }
 }

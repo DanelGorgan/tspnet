@@ -8,6 +8,6 @@ namespace Business
         void Create(Sasiu sasiu);
         IEnumerable<Sasiu> ReadAll();
         Sasiu FindById(int sasiuId);
-        void Delete(Sasiu sasiu);
+        void Delete(int sasiuId);
     }
 }

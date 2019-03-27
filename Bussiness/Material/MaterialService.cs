@@ -25,13 +25,13 @@ namespace Business
             materialRepository.Save();
         }
 
-        public void Delete(Material material)
+        public void Delete(int materialId)
         {
-            if (material != null)
+            if (materialId >0)
             {
                 throw new System.ArgumentNullException();
             }
-            materialRepository.Delete(material);
+            materialRepository.Delete(materialId);
             materialRepository.Save();
         }
 

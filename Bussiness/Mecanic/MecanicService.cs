@@ -24,13 +24,13 @@ namespace Business
             mecanicRepository.Save();
         }
 
-        public void Delete(Mecanic mecanic)
+        public void Delete(int mecanicId)
         {
-            if (mecanic != null)
+            if (mecanicId >0)
             {
                 throw new System.ArgumentNullException();
             }
-            mecanicRepository.Delete(mecanic);
+            mecanicRepository.Delete(mecanicId);
             mecanicRepository.Save();
         }
 

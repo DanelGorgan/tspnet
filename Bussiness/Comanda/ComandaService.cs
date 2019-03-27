@@ -25,13 +25,13 @@ namespace Business
             comandaRepository.Save();
         }
 
-        public void Delete(Comanda comanda)
+        public void Delete(int comandaId)
         {
-            if (comanda != null)
+            if (comandaId > 0)
             {
                 throw new System.ArgumentNullException();
             }
-            comandaRepository.Delete(comanda);
+            comandaRepository.Delete(comandaId);
             comandaRepository.Save();
         }
 
@@ -59,7 +59,6 @@ namespace Business
             var comandaU = comandaRepository.Where(c => c.Id == comanda.Id).FirstOrDefault();
 
             comanda.Auto = comanda.Auto ==null ? comanda.Auto : comanda.Auto;
-            comanda.Client = comanda.Client == null ? comanda.Client : comanda.Client;
             comanda.DataFinalizare = comanda.DataFinalizare == default(DateTime) ? comanda.DataFinalizare : comanda.DataFinalizare;
             comanda.DataProgramare = comanda.DataProgramare == default(DateTime) ? comanda.DataProgramare : comanda.DataProgramare;
             comanda.DataSystem = comanda.DataSystem == null ? comanda.DataSystem : comanda.DataSystem;
