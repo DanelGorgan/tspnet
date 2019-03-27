@@ -2,6 +2,5 @@
 {
     public partial class Sasiu : IEntity
     {
-        public int Auto_Id { get; set; }
     }
 }
